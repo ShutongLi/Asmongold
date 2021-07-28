@@ -3,7 +3,7 @@ import numpy as np
 import re
 import matplotlib.pyplot as plt
 
-KEYWORDS = ['wow', 'refugee', 'bald', 'asmon', 'warcraft', 'eighth']
+KEYWORDS = ['wow', 'refugee', 'bald', 'asmon', 'warcraft', 'eighth', 'cat girl', 'cat boy','milfina','uberdanger']
 asmon_declare = '2021/06/12'
 asmon_stream = '2021/07/03'
 

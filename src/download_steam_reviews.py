@@ -48,7 +48,7 @@ def get_reviews(URL=URL, appid=39210, review_filter = 'recent', is_json=1, curso
         arg_dict['cursor'] = cursor
         # update current_date for loop
         earliest_date = reviews['timestamp_created'].min()
-        # add reviews to local_data
+        # add reviews to local_data 
         local_data = local_data.append(reviews)
         # if the local_data is too large
         if local_data.shape[0] > size_limit:
