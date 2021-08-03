@@ -3,7 +3,7 @@ import numpy as np
 import re
 import matplotlib.pyplot as plt
 
-KEYWORDS = ['wow', 'refugee', 'bald', 'asmon', 'warcraft', 'eighth', 'cat girl', 'cat boy','milfina','uberdanger']
+KEYWORDS = ['wow', 'refugee', 'bald', 'asmon', 'eighth', 'cat girl', 'cat boy','milfina','uberdanger']
 asmon_declare = '2021/06/12'
 asmon_stream = '2021/07/03'
 
@@ -23,7 +23,7 @@ def find_asmon_reviews(data, keywords=KEYWORDS):
 # function to generate graph for number of relevant 
 def generate_relevancy_graph(data, smooth = False, N = 2):
     data = find_asmon_reviews(data)
-    series = data[['timestamp_created', 'is_relevant']].groupby('timestamp_created').sum()
+    series = data[['timestamp_created', 'is_relevant']].groupby('timestamp_created').mean()
     asmon_declare_idx = series.index.get_loc(asmon_declare)
     asmon_stream_idx = series.index.get_loc(asmon_stream)
     title = 'Asmongold relevance over time'
